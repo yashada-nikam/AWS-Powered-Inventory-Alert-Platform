@@ -28,31 +28,6 @@ This project demonstrates a serverless solution to monitor inventory levels in r
 
 ---
 
-## **Setup Instructions**
-### Prerequisites:
-- AWS account with permissions for DynamoDB, Lambda, and SNS.
-- AWS CLI installed and configured.
-- Python 3.8+ installed locally.
-
-### Steps:
-1. Clone this repository:
-    ```bash
-    git clone <repository_url>
-    cd aws-inventory-alert
-    ```
-2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Deploy the CloudFormation template:
-    ```bash
-    aws cloudformation deploy --template-file template.yaml --stack-name InventoryAlertStack
-    ```
-4. Update inventory data via API or AWS CLI.
-5. Monitor alerts via your SNS subscriptions.
-
----
-
 ## **How to Use**
 1. Add inventory records to DynamoDB with attributes like `product_id`, `product_name`, and `stock_level`.
 2. Lambda automatically evaluates stock levels and triggers SNS for low-stock alerts.
